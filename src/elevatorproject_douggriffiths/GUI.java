@@ -312,6 +312,13 @@ public class GUI extends javax.swing.JFrame {
         floor1Label.setText("1");
 
         floor1.setBackground(new java.awt.Color(200, 200, 200));
+        floor1.setForeground(new java.awt.Color(3, 3, 3));
+        floor1.setText("X");
+        floor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                floor1ActionPerformed(evt);
+            }
+        });
 
         floor2.setBackground(new java.awt.Color(200, 200, 200));
 
@@ -752,11 +759,11 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_person1LocationActionPerformed
 
     private void person1GoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person1GoActionPerformed
-        // TODO add your handling code here:
+        person1.setDestinationFloor(Integer.parseInt(person1Floor.getText()));
     }//GEN-LAST:event_person1GoActionPerformed
 
     private void person1FloorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person1FloorActionPerformed
-        person1.setDestinationFloor(Integer.parseInt(person1Floor.getText()));
+        
     }//GEN-LAST:event_person1FloorActionPerformed
 
     private void person1CallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person1CallActionPerformed
@@ -770,15 +777,22 @@ public class GUI extends javax.swing.JFrame {
     private void stopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stopButtonActionPerformed
         continueToRun = false;
     }//GEN-LAST:event_stopButtonActionPerformed
+
+    private void floor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_floor1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_floor1ActionPerformed
     
    public boolean continueRunning()
     {
         return continueToRun;
     }
     
-        public void updateElevatorStatus(int floor, String s)
+    public void updateElevatorStatus(int floor, String s)
     {
         // TO DO....need to add code here to mark floor and erase all other floors
+        // add all text fields in array, use for loop 
+        // ORRRRRRRR if floor = 1, set text to X, else set text to blank.
+        floor = Integer.parseInt(person1Floor.getText());
         elevatorStatus.setText(s);
     }
     

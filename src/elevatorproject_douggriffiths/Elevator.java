@@ -38,8 +38,26 @@ public class Elevator extends Thread {
     
     public synchronized void calledToFloor(int floor)
     {
+        if (status == IDLE) {
+            if (floor > currentFloor) {
+                status = UP;
+                myApp.updateElevatorStatus(currentFloor, "UP");
+            }
+            else if (floor < currentFloor) {
+                status = DOWN;
+                myApp.updateElevatorStatus(currentFloor, "DOWN");
+            }
+            else {
+                // Do nothing FOR NOW.
+            }
+        }
+        // if current floor is greater than max floor, less than min floor.
+        // 
+        
         // need code to either set min/max floor or set field in array
         // change out of idle status, set new max and min floor, change direction if needed
+        
+        // Code to STOP elevator, too.
     }
     
     public void run() {
