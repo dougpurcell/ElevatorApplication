@@ -73,8 +73,7 @@ public class Person extends Thread {
             }
             else // ON_ELEVATOR 
             {
-                if (destFloor == myElevator.getCurrentFloor())
-                {
+                 if (destFloor == myElevator.getCurrentFloor()) {
                     status = ON_FLOOR;
                     currentFloor = destFloor;
                     myApp.updatePersonStatus(personID, "On Floor " + currentFloor);

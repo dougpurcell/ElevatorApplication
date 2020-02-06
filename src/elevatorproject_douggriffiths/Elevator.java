@@ -41,16 +41,20 @@ public class Elevator extends Thread {
         if (status == IDLE) {
             if (floor > currentFloor) {
                 status = UP;
+                maxFloor = floor;
                 myApp.updateElevatorStatus(currentFloor, "UP");
             }
             else if (floor < currentFloor) {
                 status = DOWN;
+                minFloor = floor;
                 myApp.updateElevatorStatus(currentFloor, "DOWN");
             }
+            
             else {
                 // Do nothing FOR NOW.
             }
         }
+        
         // if current floor is greater than max floor, less than min floor.
         // 
         
@@ -65,8 +69,7 @@ public class Elevator extends Thread {
         while (myApp.continueRunning()) // check with GUI App to see if running should continue
         {
            
-            if (status == IDLE)
-            {
+            if (status == IDLE) {
                  myApp.updateElevatorStatus(currentFloor, "IDLE" );
             }
             else if (status == UP)
@@ -77,10 +80,8 @@ public class Elevator extends Thread {
                 }
                 else 
                 {
-                    // modify logic for setting to idle in future
-                    
-                    status = DOWN;
-                    myApp.updateElevatorStatus(currentFloor, "DOWN" );
+                    status = IDLE;
+                    myApp.updateElevatorStatus(currentFloor, "IDLE" );
                 }
                  
             }
@@ -90,12 +91,9 @@ public class Elevator extends Thread {
                    currentFloor--;
                    myApp.updateElevatorStatus(currentFloor, "DOWN" );
                 }
-                else
-                {
-                     // modify logic for setting to idle in future
-                    
-                    status = UP;
-                    myApp.updateElevatorStatus(currentFloor, "UP" );
+                else {
+                    status = IDLE;
+                    myApp.updateElevatorStatus(currentFloor, "IDLE" );
                 }
                 
             }

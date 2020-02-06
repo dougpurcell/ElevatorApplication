@@ -787,13 +787,68 @@ public class GUI extends javax.swing.JFrame {
         return continueToRun;
     }
     
-    public void updateElevatorStatus(int floor, String s)
-    {
+    public void updateElevatorStatus(int floor, String s) {
+
+        elevatorStatus.setText(s);
+        if (floor == 1) {
+            floor1.setText("X");
+        } else {
+            floor1.setText("");
+        }
+        if (floor == 2) {
+            floor2.setText("X");
+        } else {
+            floor2.setText("");
+        }
+        if (floor == 3) {
+            floor3.setText("X");
+        } else {
+            floor3.setText("");
+        }
+        if (floor == 4) {
+            floor4.setText("X");
+        } else {
+            floor4.setText("");
+        }
+        if (floor == 5) {
+            floor5.setText("X");
+        } else {
+            floor5.setText("");
+        }
+        if (floor == 6) {
+            floor6.setText("X");
+        } else {
+            floor6.setText("");
+        }
+        if (floor == 7) {
+            floor7.setText("X");
+        } else {
+            floor7.setText("");
+        }
+        if (floor == 8) {
+            floor8.setText("X");
+        } else {
+            floor8.setText("");
+        }
+        if (floor == 9) {
+            floor9.setText("X");
+        } else {
+            floor9.setText("");
+        }
+        if (floor == 10) {
+            floor10.setText("X");
+        } else {
+            floor10.setText("");
+        }
+        if (floor == 11) {
+            floor11.setText("X");
+        } else {
+            floor11.setText("");
+        }
         // TO DO....need to add code here to mark floor and erase all other floors
         // add all text fields in array, use for loop 
         // ORRRRRRRR if floor = 1, set text to X, else set text to blank.
-        floor = Integer.parseInt(person1Floor.getText());
-        elevatorStatus.setText(s);
+
     }
     
      public void updatePersonStatus(int id, String s)
