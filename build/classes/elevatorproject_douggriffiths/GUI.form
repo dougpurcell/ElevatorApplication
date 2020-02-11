@@ -125,7 +125,7 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="personFive" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="person4Call1" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <Component id="person5Call" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -133,13 +133,13 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="person5Floor" min="-2" pref="40" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="person4Go1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="person5Go" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="person5Where" min="-2" max="-2" attributes="0"/>
-                                      <Component id="person4Location1" max="32767" attributes="0"/>
+                                      <Component id="person5Location" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">
@@ -381,15 +381,15 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="person5Floor" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="person4Go1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="person4Location1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="person5Go" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="person5Location" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                   <Component id="person5Where" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="person4Call1" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="person5Call" min="-2" pref="32" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -728,7 +728,7 @@
             <Property name="text" type="java.lang.String" value="Person 5"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="person4Call1">
+        <Component class="javax.swing.JButton" name="person5Call">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="e1" green="e1" red="e1" type="rgb"/>
@@ -736,7 +736,7 @@
             <Property name="text" type="java.lang.String" value="Call"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="person4Call1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="person5CallActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="person5Floor">
@@ -749,7 +749,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="person5FloorActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="person4Go1">
+        <Component class="javax.swing.JButton" name="person5Go">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="e1" green="e1" red="e1" type="rgb"/>
@@ -757,17 +757,17 @@
             <Property name="text" type="java.lang.String" value="Go"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="person4Go1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="person5GoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="person4Location1">
+        <Component class="javax.swing.JTextField" name="person5Location">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c8" green="c8" red="c8" type="rgb"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="person4Location1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="person5LocationActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="person5Where">

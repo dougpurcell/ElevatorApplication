@@ -20,6 +20,9 @@ public class GUI extends javax.swing.JFrame {
         myElevator.start();
         person1.start();
         person2.start();
+        person3.start();
+        person4.start();
+        person5.start();
         
     }
 
@@ -63,10 +66,10 @@ public class GUI extends javax.swing.JFrame {
         person4Where = new javax.swing.JLabel();
         person5WhatFloor = new javax.swing.JLabel();
         personFive = new javax.swing.JLabel();
-        person4Call1 = new javax.swing.JButton();
+        person5Call = new javax.swing.JButton();
         person5Floor = new javax.swing.JTextField();
-        person4Go1 = new javax.swing.JButton();
-        person4Location1 = new javax.swing.JTextField();
+        person5Go = new javax.swing.JButton();
+        person5Location = new javax.swing.JTextField();
         person5Where = new javax.swing.JLabel();
         floor1Label = new javax.swing.JLabel();
         floor1 = new javax.swing.JTextField();
@@ -274,11 +277,11 @@ public class GUI extends javax.swing.JFrame {
         personFive.setForeground(new java.awt.Color(3, 3, 3));
         personFive.setText("Person 5");
 
-        person4Call1.setBackground(new java.awt.Color(225, 225, 225));
-        person4Call1.setText("Call");
-        person4Call1.addActionListener(new java.awt.event.ActionListener() {
+        person5Call.setBackground(new java.awt.Color(225, 225, 225));
+        person5Call.setText("Call");
+        person5Call.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                person4Call1ActionPerformed(evt);
+                person5CallActionPerformed(evt);
             }
         });
 
@@ -289,18 +292,18 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        person4Go1.setBackground(new java.awt.Color(225, 225, 225));
-        person4Go1.setText("Go");
-        person4Go1.addActionListener(new java.awt.event.ActionListener() {
+        person5Go.setBackground(new java.awt.Color(225, 225, 225));
+        person5Go.setText("Go");
+        person5Go.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                person4Go1ActionPerformed(evt);
+                person5GoActionPerformed(evt);
             }
         });
 
-        person4Location1.setBackground(new java.awt.Color(200, 200, 200));
-        person4Location1.addActionListener(new java.awt.event.ActionListener() {
+        person5Location.setBackground(new java.awt.Color(200, 200, 200));
+        person5Location.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                person4Location1ActionPerformed(evt);
+                person5LocationActionPerformed(evt);
             }
         });
 
@@ -469,18 +472,18 @@ public class GUI extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(personFive, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(person4Call1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(person5Call, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(36, 36, 36)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(person5WhatFloor)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(person5Floor, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(person4Go1)))
+                                        .addComponent(person5Go)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(person5Where)
-                                    .addComponent(person4Location1)))
+                                    .addComponent(person5Location)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(personTwo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -662,13 +665,13 @@ public class GUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(person5Floor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(person4Go1)
-                                    .addComponent(person4Location1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(person5Go)
+                                    .addComponent(person5Location, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(4, 4, 4)
                                 .addComponent(person5Where)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(person4Call1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(person5Call, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(stopButton)
@@ -691,28 +694,30 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void person4Location1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person4Location1ActionPerformed
+    private void person5LocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person5LocationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_person4Location1ActionPerformed
+    }//GEN-LAST:event_person5LocationActionPerformed
 
-    private void person4Go1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person4Go1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_person4Go1ActionPerformed
+    private void person5GoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person5GoActionPerformed
+        person5.setDestinationFloor(Integer.parseInt(person5Floor.getText()));
+
+    }//GEN-LAST:event_person5GoActionPerformed
 
     private void person5FloorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person5FloorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_person5FloorActionPerformed
 
-    private void person4Call1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person4Call1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_person4Call1ActionPerformed
+    private void person5CallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person5CallActionPerformed
+        person5.callElevator();
+    }//GEN-LAST:event_person5CallActionPerformed
 
     private void person4LocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person4LocationActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_person4LocationActionPerformed
 
     private void person4GoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person4GoActionPerformed
-        // TODO add your handling code here:
+        person4.setDestinationFloor(Integer.parseInt(person4Floor.getText()));
+
     }//GEN-LAST:event_person4GoActionPerformed
 
     private void person4FloorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person4FloorActionPerformed
@@ -720,7 +725,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_person4FloorActionPerformed
 
     private void person4CallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person4CallActionPerformed
-        // TODO add your handling code here:
+        person4.callElevator();
     }//GEN-LAST:event_person4CallActionPerformed
 
     private void person3LocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person3LocationActionPerformed
@@ -728,7 +733,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_person3LocationActionPerformed
 
     private void person3GoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person3GoActionPerformed
-        // TODO add your handling code here:
+        person3.setDestinationFloor(Integer.parseInt(person3Floor.getText()));
+
     }//GEN-LAST:event_person3GoActionPerformed
 
     private void person3FloorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person3FloorActionPerformed
@@ -736,7 +742,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_person3FloorActionPerformed
 
     private void person3CallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person3CallActionPerformed
-        // TODO add your handling code here:
+        person3.callElevator();
     }//GEN-LAST:event_person3CallActionPerformed
 
     private void person2LocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person2LocationActionPerformed
@@ -855,12 +861,20 @@ public class GUI extends javax.swing.JFrame {
      public void updatePersonStatus(int id, String s)
     {
         // TO DO....based on respective id, update person text with string s
-        if (id == 1)
-        {
+        if (id == 1){        
            person1Location.setText(s);
         }
-        if (id == 2){
+        else if (id == 2){
             person2Location.setText(s);
+        }
+        else if (id == 3){
+            person3Location.setText(s);
+        }
+        else if (id == 4){
+            person4Location.setText(s);
+        }
+        else if (id == 5){
+            person5Location.setText(s);
         }
     }
      
@@ -961,15 +975,15 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel person3WhatFloor;
     private javax.swing.JLabel person3Where;
     private javax.swing.JButton person4Call;
-    private javax.swing.JButton person4Call1;
     private javax.swing.JTextField person4Floor;
     private javax.swing.JButton person4Go;
-    private javax.swing.JButton person4Go1;
     private javax.swing.JTextField person4Location;
-    private javax.swing.JTextField person4Location1;
     private javax.swing.JLabel person4WhatFloor;
     private javax.swing.JLabel person4Where;
+    private javax.swing.JButton person5Call;
     private javax.swing.JTextField person5Floor;
+    private javax.swing.JButton person5Go;
+    private javax.swing.JTextField person5Location;
     private javax.swing.JLabel person5WhatFloor;
     private javax.swing.JLabel person5Where;
     private javax.swing.JLabel personFive;
@@ -984,5 +998,7 @@ public class GUI extends javax.swing.JFrame {
     private Elevator myElevator = new Elevator(this);
     private Person person1 = new Person(1, this, myElevator);
     private Person person2 = new Person(2, this, myElevator);
-
+    private Person person3 = new Person(3, this, myElevator);
+    private Person person4 = new Person(4, this, myElevator);
+    private Person person5 = new Person(5, this, myElevator);
 }
