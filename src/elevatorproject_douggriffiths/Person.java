@@ -33,8 +33,7 @@ public class Person extends Thread {
         
     }
     
-    public void callElevator()
-    { 
+    public void callElevator() { 
         if(status == ON_FLOOR)
         {
             status = WAITING;
@@ -44,25 +43,19 @@ public class Person extends Thread {
         
     }
     
-    public void setDestinationFloor(int floor)
-    {
+    public void setDestinationFloor(int floor) {
         if(status == ON_ELEVATOR)
         {
             destFloor = floor;
             myApp.updatePersonStatus(personID, "Destination Floor set to " + destFloor);
             myElevator.calledToFloor(destFloor);
-           
         }
     }
     
     public void run() {
         while (myApp.continueRunning()) // check with GUI App to see if running should continue
         {
-            if (status == ON_FLOOR)
-            {
-                
-            }
-            else if (status == WAITING)
+            if (status == WAITING)
             {
                 if (currentFloor == myElevator.getCurrentFloor())
                 {
@@ -70,19 +63,21 @@ public class Person extends Thread {
                     myApp.updatePersonStatus(personID, "On Elevator");
                 }
                 
-            }
+            } 
             else // ON_ELEVATOR 
             {
-                 if (destFloor == myElevator.getCurrentFloor()) {
+                if (destFloor == myElevator.getCurrentFloor()) {
                     status = ON_FLOOR;
                     currentFloor = destFloor;
+                    destFloor = -1;
                     myApp.updatePersonStatus(personID, "On Floor " + currentFloor);
-                }
+                } 
             }
             
-             try {
+            try {
                 Thread.sleep(500);
-            } catch (InterruptedException ex) {
+            } 
+            catch (InterruptedException ex) {
                 Logger.getLogger(Elevator.class.getName()).log(Level.SEVERE, null, ex);
             }
         }

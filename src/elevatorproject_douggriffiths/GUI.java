@@ -19,6 +19,7 @@ public class GUI extends javax.swing.JFrame {
         
         myElevator.start();
         person1.start();
+        person2.start();
         
     }
 
@@ -743,7 +744,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_person2LocationActionPerformed
 
     private void person2GoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person2GoActionPerformed
-        // TODO add your handling code here:
+        person2.setDestinationFloor(Integer.parseInt(person2Floor.getText()));
     }//GEN-LAST:event_person2GoActionPerformed
 
     private void person2FloorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person2FloorActionPerformed
@@ -751,7 +752,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_person2FloorActionPerformed
 
     private void person2CallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person2CallActionPerformed
-        // TODO add your handling code here:
+        person2.callElevator();
     }//GEN-LAST:event_person2CallActionPerformed
 
     private void person1LocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_person1LocationActionPerformed
@@ -857,6 +858,9 @@ public class GUI extends javax.swing.JFrame {
         if (id == 1)
         {
            person1Location.setText(s);
+        }
+        if (id == 2){
+            person2Location.setText(s);
         }
     }
      
@@ -979,5 +983,6 @@ public class GUI extends javax.swing.JFrame {
     private boolean continueToRun = true;
     private Elevator myElevator = new Elevator(this);
     private Person person1 = new Person(1, this, myElevator);
+    private Person person2 = new Person(2, this, myElevator);
 
 }

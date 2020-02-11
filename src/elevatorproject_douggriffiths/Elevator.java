@@ -49,41 +49,31 @@ public class Elevator extends Thread {
                 minFloor = floor;
                 myApp.updateElevatorStatus(currentFloor, "DOWN");
             }
-            
-            else {
-                // Do nothing FOR NOW.
-            }
+
         }
-        
+        // status - up and passed
+        // status - up and not passed
+        // status - down and passed
+        // status - down and not passed
         // if current floor is greater than max floor, less than min floor.
-        // 
-        
-        // need code to either set min/max floor or set field in array
-        // change out of idle status, set new max and min floor, change direction if needed
-        
-        // Code to STOP elevator, too.
     }
     
     public void run() {
         
         while (myApp.continueRunning()) // check with GUI App to see if running should continue
         {
-           
             if (status == IDLE) {
                  myApp.updateElevatorStatus(currentFloor, "IDLE" );
             }
-            else if (status == UP)
-            {
-                if (currentFloor < maxFloor){
+            else if (status == UP) {
+                if (currentFloor < maxFloor) {
                    currentFloor++;
                    myApp.updateElevatorStatus(currentFloor, "UP" );
                 }
-                else 
-                {
+                else {
                     status = IDLE;
                     myApp.updateElevatorStatus(currentFloor, "IDLE" );
                 }
-                 
             }
             else // DOWN
             {
@@ -95,7 +85,6 @@ public class Elevator extends Thread {
                     status = IDLE;
                     myApp.updateElevatorStatus(currentFloor, "IDLE" );
                 }
-                
             }
             
             try {
