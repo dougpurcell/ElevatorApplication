@@ -51,11 +51,32 @@ public class Elevator extends Thread {
             }
 
         }
-        // status - up and passed
-        // status - up and not passed
-        // status - down and passed
-        // status - down and not passed
-        // if current floor is greater than max floor, less than min floor.
+        else if (status == UP) {
+            if (floor > currentFloor) {
+                if (floor > maxFloor) {
+                    maxFloor = floor;
+                }
+            } 
+            else {
+                if (floor < minFloor) {
+                    minFloor = floor;
+                }
+            }
+        }
+        else // status == DOWN
+        {
+            if (floor < currentFloor) {
+                if (floor < minFloor) {
+                    minFloor = floor;
+                }
+
+            } 
+            else {
+                if (floor > maxFloor) {
+                    maxFloor = floor;
+                }
+            }
+        }
     }
     
     public void run() {
@@ -71,8 +92,21 @@ public class Elevator extends Thread {
                    myApp.updateElevatorStatus(currentFloor, "UP" );
                 }
                 else {
-                    status = IDLE;
-                    myApp.updateElevatorStatus(currentFloor, "IDLE" );
+                    int tempMax = 1;
+                    int tempMin = 11;
+                    
+                    if( (maxFloor == tempMax) || (minFloor == tempMin) ){ // FINISH THIS IF. TODOOOOOOOOO.
+
+                        status = IDLE;
+                        myApp.updateElevatorStatus(currentFloor, "IDLE");
+                    }
+                    else {
+                        tempMax = 1;
+                        tempMin = 11;
+                        status = DOWN;
+                        myApp.updateElevatorStatus(currentFloor, "DOWN" );
+                    }
+                    
                 }
             }
             else // DOWN
@@ -82,8 +116,8 @@ public class Elevator extends Thread {
                    myApp.updateElevatorStatus(currentFloor, "DOWN" );
                 }
                 else {
-                    status = IDLE;
-                    myApp.updateElevatorStatus(currentFloor, "IDLE" );
+                    status = UP;
+                    myApp.updateElevatorStatus(currentFloor, "UP" );
                 }
             }
             
@@ -92,7 +126,8 @@ public class Elevator extends Thread {
             } catch (InterruptedException ex) {
                 Logger.getLogger(Elevator.class.getName()).log(Level.SEVERE, null, ex);
             }
-           
         }
+        
+        myApp.updateElevatorStatus(currentFloor, "IDLE");
     }
 }
