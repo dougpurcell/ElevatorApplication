@@ -92,17 +92,14 @@ public class Elevator extends Thread {
                    myApp.updateElevatorStatus(currentFloor, "UP" );
                 }
                 else {
-                    int tempMax = 1;
-                    int tempMin = 11;
-                    
-                    if( (maxFloor == tempMax) || (minFloor == tempMin) ){ // FINISH THIS IF. TODOOOOOOOOO.
-
+                   minFloor = 11;
+                   
+                    if ( (maxFloor == 1) && (minFloor == 11) ){ // FINISH THIS IF. TODOOOOOOOOO.
                         status = IDLE;
                         myApp.updateElevatorStatus(currentFloor, "IDLE");
                     }
                     else {
-                        tempMax = 1;
-                        tempMin = 11;
+                        minFloor = 1;
                         status = DOWN;
                         myApp.updateElevatorStatus(currentFloor, "DOWN" );
                     }
@@ -116,8 +113,15 @@ public class Elevator extends Thread {
                    myApp.updateElevatorStatus(currentFloor, "DOWN" );
                 }
                 else {
-                    status = UP;
-                    myApp.updateElevatorStatus(currentFloor, "UP" );
+                   maxFloor = 1;
+                    if ( (maxFloor == 1) && (minFloor == 11) ){ // FINISH THIS IF. TODOOOOOOOOO.
+                        status = IDLE;
+                        myApp.updateElevatorStatus(currentFloor, "IDLE");
+                    }
+                    else {
+                        status = UP;
+                        myApp.updateElevatorStatus(currentFloor, "UP" );
+                    }
                 }
             }
             

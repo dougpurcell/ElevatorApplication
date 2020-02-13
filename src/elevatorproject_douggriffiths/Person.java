@@ -69,13 +69,13 @@ public class Person extends Thread {
                 if (destFloor == myElevator.getCurrentFloor()) {
                     status = ON_FLOOR;
                     currentFloor = destFloor;
-                    destFloor = -1;
+//                    destFloor = -1;
                     myApp.updatePersonStatus(personID, "On Floor " + currentFloor);
                 } 
             }
             
             try {
-                Thread.sleep(500);
+                Thread.sleep(1000);
             } 
             catch (InterruptedException ex) {
                 Logger.getLogger(Elevator.class.getName()).log(Level.SEVERE, null, ex);
